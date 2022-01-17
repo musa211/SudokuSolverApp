@@ -14,7 +14,6 @@
         custom:boardColor="@color/black"
         custom:cellFillColor="@color/teal_200"
         custom:cellHighlightColor="#2600DDFF"
-        custom:layout_constraintBottom_toBottomOf="parent"
         custom:layout_constraintEnd_toEndOf="parent"
         custom:layout_constraintStart_toStartOf="parent"
         custom:layout_constraintTop_toTopOf="parent">
