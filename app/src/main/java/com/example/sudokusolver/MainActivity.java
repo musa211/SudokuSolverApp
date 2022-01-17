@@ -72,8 +72,13 @@ public class MainActivity extends AppCompatActivity {
     public void solve(View view) {
         if (solveBTN.getText().toString().equals(getString(R.string.solve))) {
             solveBTN.setText(getString(R.string.clear));
+
+            gameBoardSolver.getEmptyBoxIndexes();
         } else {
             solveBTN.setText(getString(R.string.solve));
+
+            gameBoardSolver.resetBoard();
+            gameBoard.invalidate();
         }
     }
 }
