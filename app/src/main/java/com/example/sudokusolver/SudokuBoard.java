@@ -189,4 +189,8 @@ public class SudokuBoard extends View {
                     getWidth(), cellSize * r, boardColorPaint);
         }
     }
+
+    public SudokuSolver getSolver() {
+        return solver;
+    }
 }
