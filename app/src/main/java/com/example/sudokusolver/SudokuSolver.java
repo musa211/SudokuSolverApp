@@ -1,6 +1,11 @@
 package com.example.sudokusolver;
 
+import java.util.ArrayList;
+
 public class SudokuSolver {
+
+    int[][] board;
+    ArrayList<ArrayList<Object>> emptyBoxIndex;
 
     private static int selected_row;
     private static int selected_column;
@@ -8,7 +13,30 @@ public class SudokuSolver {
     SudokuSolver() {
         selected_row = -1;
         selected_column = -1;
+
+        board = new int[9][9];
+        for (int r = 0; r < 9; r++) {
+            for (int c = 0; c < 9; c++) {
+                board[r][c] = 0;
+            }
+        }
+
+        emptyBoxIndex = new ArrayList<>();
     }
+
+    private void getEmptyBoxIndexes () {
+        for (int r = 0; r < 9; r++) {
+            for (int c = 0; c< 9; c++) {
+                if (this.board[r][c] == 0) {
+                    this.emptyBoxIndex.add(new ArrayList<>());
+                    this.emptyBoxIndex.get(this.emptyBoxIndex.size() - 1).add(r);
+                    this.emptyBoxIndex.get(this.emptyBoxIndex.size() - 1).add(c);
+                }
+            }
+        }
+    }
+
+
 
     public int getSelectedRow() {
         return selected_row;
