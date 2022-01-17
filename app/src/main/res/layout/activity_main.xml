@@ -15,7 +15,7 @@
         custom:cellFillColor="@color/teal_200"
         custom:cellHighlightColor="#2600DDFF"
         custom:letterColor="@color/black"
-        custom:letterColorSolve="@color/black"
+        custom:letterColorSolve="@color/teal_700"
         custom:layout_constraintEnd_toEndOf="parent"
         custom:layout_constraintStart_toStartOf="parent"
         custom:layout_constraintTop_toTopOf="parent">

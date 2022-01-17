@@ -74,11 +74,24 @@ public class MainActivity extends AppCompatActivity {
             solveBTN.setText(getString(R.string.clear));
 
             gameBoardSolver.getEmptyBoxIndexes();
+
+            SolveBoardThread solveBoardThread = new SolveBoardThread();
+            new Thread(solveBoardThread).start();
+
+            gameBoard.invalidate();
+
         } else {
             solveBTN.setText(getString(R.string.solve));
 
             gameBoardSolver.resetBoard();
             gameBoard.invalidate();
+        }
+    }
+
+    class SolveBoardThread implements Runnable {
+        @Override
+        public void run() {
+            gameBoardSolver.solve(gameBoard);
         }
     }
 }

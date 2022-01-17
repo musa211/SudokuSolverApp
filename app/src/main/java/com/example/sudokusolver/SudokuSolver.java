@@ -52,7 +52,7 @@ public class SudokuSolver {
 
             for (int r = boxRow * 3; r < 3 * boxRow + 3; r++) {
                 for (int c = boxCol * 3; c < 3 * boxCol + 3; c++) {
-                    if (this.board[r][c] == this.board[row][boxCol] && row != r && col != c) {
+                    if (this.board[r][c] == this.board[row][col] && row != r && col != c) {
                         return false;
                     }
                 }
