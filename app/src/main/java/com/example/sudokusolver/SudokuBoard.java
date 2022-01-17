@@ -95,8 +95,8 @@ public class SudokuBoard extends View {
         int action = event.getAction();
 
         if (action == MotionEvent.ACTION_DOWN) {
-            solver.setSelectedRow((int) Math.ceil(y/cellSize));
-            solver.setSelectedColumn((int) Math.ceil(x/cellSize));
+            solver.setSelectedRow((int) Math.ceil(y / cellSize));
+            solver.setSelectedColumn((int) Math.ceil(x / cellSize));
             isValid = true;
         } else {
             isValid = false;
